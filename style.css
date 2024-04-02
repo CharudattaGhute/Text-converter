@@ -1,0 +1,23 @@
+body{
+background-color: rgb(244, 244, 249);
+}
+
+.container textarea{
+    border: 5px double black;
+    box-shadow: 10px 5px 10px 5px rgb(100, 100, 105);
+}
+.container button{
+    background-color:green;
+}
+.container textarea:hover{
+    transition: 1s;
+    transform:scale(1);
+    box-shadow: 10px 10px 10px 10px rgb(100, 100, 105);
+
+}
+button:hover{
+    transition: 1s;
+    transform:scale(1.2);
+    box-shadow: 10px 10px 10px 10px rgb(100, 100, 105);
+
+}
