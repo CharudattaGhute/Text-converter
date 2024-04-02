@@ -29,6 +29,14 @@ To run this application locally, follow these steps:
 
 3. Open the `index.html` file in your web browser.
 
+
+# Demo Video
+
+
+https://github.com/CharudattaGhute/Text-converter/assets/122104600/6aab4107-1d56-42bd-a074-61c7468c8e42
+
+
+
 ## Usage
 1. Enter text into the textarea provided.
 2. Click on the respective buttons to perform various text operations.
