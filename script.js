@@ -55,3 +55,24 @@ function countChar() {
   const counttext = (text.match(new RegExp(charToCount, "g")) || []).length;
   document.getElementById("textarea").value = counttext;
 }
+function replace() {
+  const replacestr = document.getElementById("textarea").value;
+  const resultreplace = replacestr.replaceAll("the", "is");
+  document.getElementById("textarea").value = resultreplace;
+}
+function hello() {
+  let result = document.getElementById("textarea").value;
+  let vouwelcount = 0;
+  for (const char of result) {
+    if (
+      char === "a" ||
+      char === "e" ||
+      char === "i" ||
+      char === "o" ||
+      char === "u"
+    ) {
+      vouwelcount++;
+    }
+  }
+  document.getElementById("textarea").value = vouwelcount;
+}
