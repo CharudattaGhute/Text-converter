@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Text converter</title>
+    <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,34 +15,94 @@
 
 <body>
     <div class="container mt-5">
-        <textarea class="form-control " rows="7" id="textarea"></textarea>
+
+        <h1 class="title " style="color: brown; display: flex; align-items: center; justify-content: center;">
+            Online
+            Bookstore Inventory Management</h1>
+        <label for="bookTitle" style="margin-top: 5%">Book Id</label>
+        <input type="number" class="form-control" placeholder="Enter the Id" id="Id1" />
+        <label for="bookTitle" style="margin-top: 2%;">Title</label>
+        <input type="text" class="form-control" placeholder="Title" id="title" /><br>
+        <label for="inputexample">Author</label><br>
+        <input type="text" class="form-control" placeholder="Enter the author" id="author"><br>
+        <label for="inputexample">Price</label><br>
+        <input type="price" class="form-control" placeholder="Price" id="price" /><br>
+        <label for="inputexample">Quantity</label><br>
+        <input type="number" class="form-control" placeholder="Number of books available" id="quantity" /><br>
+        <div class="btn-group">
+            <button class="btn btn-success btn-lg mt-3 ml-5" onclick="submit()"
+                style="border-radius: 10px;">Submit</button>
+            <button class="btn btn-danger btn-lg mt-3 ml-2" onclick="clearall()" style="border-radius: 10px;"
+                id="clearBtn">Clear All</button>
+
+        </div>
     </div>
-
-    <div class="container mt-5" style="display: flex; justify-content: center; align-items: center; gap: 20px;">
-        <button onclick="uppcase()" class="btn btn-danger">UpperCase</button>
-        <button onclick="lowercase()" class=" btn btn-danger">LowerCase</button>
-        <button onclick="trim()" class=" btn btn-danger"> whitespaces</button>
-        <button onclick="concat()" class=" btn btn-danger">concat</button>
-        <button onclick="slice()" class=" btn btn-danger">Slice</button>
-        <button onclick="length()" class=" btn btn-danger">count</button>
-        <button onclick="split()" class=" btn btn-danger">split</button>
-        <button onclick="charat()" class=" btn btn-danger">Positionchr</button>
-        <button onclick="countChar()" class=" btn btn-danger">Countchar</button>
-        <button onclick="replace()" class=" btn btn-danger">Replace</button>
-        <button onclick="hello()" class=" btn btn-danger">countVowels</button>
-
+    <div class="container" id="content" style="border-radius: 10px;">
+        <table class="table table-dark mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Book Id</th>
+                    <th scope="col">Book Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="booklist"></tbody>
+        </table>
     </div>
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Edit Book</h4>
+                </div>
+                <div class="modal-body" id="showdatahere">
+                    <form action="" id="editForm"></form>
+                    <div class="form-group mb-3">
+                        <label for="bookTitle" style="margin-top: 5%">Book Id</label>
+                        <input type="number" class="form-control" placeholder="Enter the Id" id="Id2" />
+                        <label for="bookTitle" style="margin-top: 2%;">Title</label><br>
+                        <input type="text" class="form-control" placeholder="Title" id="title1" /><br>
+                        <label for="inputexample">Author</label><br>
+                        <input type="text" class="form-control" placeholder="Enter the author" id="author1"><br>
+                        <label for="inputexample">Price</label><br>
+                        <input type="price" class="form-control" placeholder="Price" id="price1" /><br>
+                        <label for="inputexample">Quantity</label><br>
+                        <input type="number" class="form-control" placeholder="Number of books available"
+                            id="quantity1" /><br>
+                        <div class="modal-footer">
+                            <button class="btn btn-success btn-lg mt-3 ml-5" style="border-radius: 20px;" id="editbtn"
+                                onclick="editcontent()">Save
+                                Changes</button>
+                            <button class="btn btn-warning btn-lg mt-3 " style="border-radius: 20px;" id="clearall"
+                                data-dismiss="modal">Close</button>
+                        </div>
 
-    <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+        <script src="script.js"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
