@@ -2,7 +2,6 @@
 
 ## Description
 Text Converter is a simple web application that allows users to perform various operations on text input, such as converting text to uppercase or lowercase, trimming whitespaces, concatenating strings, slicing text, counting characters, splitting text into an array, finding characters at specific positions, and counting occurrences of a specific character.
-
 ## Features
 - Convert text to uppercase.
 - Convert text to lowercase.
